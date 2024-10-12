@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrenamiento</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+        <div class="menu-icon" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>  
+
+<!-- Menú lateral oculto -->
+    <div class="dropdown-menu" id="dropdownMenu">
+        <a href="#Pecho">Pecho</a>
+        <a href="#Dia Pierna">Dia Pierna</a>
+        <a href="#Hombros">Hombros</a>
+        <a href="#Piernas">Pierna</a>
+        <a href="#Full-Body">Full Body</a>
+        <a href="#temporizador">Temporizador</a>
+        <a href="https://www.youtube.com/" target="blank">Calentamiento</a>
+        <a href="https://open.spotify.com/" target="blank">
+            <img src="descarga.png" alt="Spotify" />
+        </a>
+        <a href="https://www.youtube.com/" target="blank">
+            <img src="youtube.png" alt="Youtube" />
+        </a>
+          
+    </div>
+
+    <iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1fasjryhwtaBUhVTL_rX533sfSXw6HQR9K5lYZsfF_5k&font=Bevan-PontanoSans&lang=es&initial_zoom=5&height=650' width='100%' height='650' webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0'></iframe>
+  
+    <div class="content" id="pageContent">
+
+        <h1 class="header">Arnold Split x Heavy Duty</h1>
+
+        <div class="search-container">
+            <strong id="searchIconButton">
+                <img src="lupa.png" alt="Buscar" id="searchIcon" />
+            </strong>
+            <div id="searchField" class="hidden">
+                <input type="text" id="searchInput" placeholder="Buscar ejercicio..." />
+                <button id="searchButton">Buscar</button>
+                <div id="searchResults"></div>
+            </div>
+        </div>
+  
+        <div id="temporizador" class="container">
+            <h1>Temporizador</h1>
+            <div class="timer-container">
+                <input type="number" id="minutes" placeholder="Min" min="0" step="1" max="59">
+                <span>:</span>
+                <input type="number" id="seconds" placeholder="Seg" min="0" step="1" max="59">
+            </div>
+            <button id="start">Iniciar</button>
+            <button id="stop">Detener</button>
+            <div id="display">00:00</div>
+            <audio id="beep" src="alarm.mp3" preload="auto" loop></audio>
+        </div>
+    
+        <div class="hector">
+            <h2 id="Pecho">
+                <a href="#temporizador">Pecho</a>
+            </h2>
+        </div>
+    
+        <main>
+            <section class="exercise" id="Flexiones con ligas">
+                <h2>Flexiones con ligas</h2>  
+                <video controls muted>
+                    <source src="Lagartijascon pies elevados.mp4" type="video/mp4">
+                </video>
+                <div class="counter">
+                    <p>Repeticiones: <span id="counter1">0</span></p>
+                    <div class="counter-buttons">
+                        <button onclick="incrementCounter('counter1')">+</button>
+                        <button onclick="decrementCounter('counter1')">-</button>
+                        <button onclick="resetCounter('counter1')">~</button>
+                    </div>
+                </div>
+            </section>
+    
+            <section class="exercise" id="Press de pecho con ligas"></section>
+                <h2>Press de pecho con ligas</h2>  
+                <video controls muted>
+                    <source src="Lagartijascon pies.mp4" type="video/mp4">
+                </video>
+                <div class="counter">
+                    <p>Repeticiones: <span id="counter2">0</span></p>
+                    <div class="counter-buttons">
+                        <button onclick="incrementCounter('counter2')">+</button>
+                        <button onclick="decrementCounter('counter2')">-</button>
+                        <button onclick="resetCounter('counter2')">~</button>
+                    </div>
+                </div>
+            </section>
+    
+            <section class="exercise" id="Remo con ligas">
+                <h2>Remo con ligas</h2>  
+                <video controls muted>
+                    <source src="Lagartijascon pies elevados.mp4" type="video/mp4">
+                </video>
+                <div class="counter">
+                    <p>Repeticiones: <span id="counter3">0</span></p>
+                    <div class="counter-buttons">
+                        <button onclick="incrementCounter('counter3')">+</button>
+                        <button onclick="decrementCounter('counter3')">-</button>
+                        <button onclick="resetCounter('counter3')">~</button>
+                    </div>
+                </div>
+            </section>
+    
+            <section class="exercise" id="Superman">
+                <h2>Superman</h2>  
+                <video controls muted>
+                    <source src="Lagartijascon pies elevados.mp4" type="video/mp4">
+                </video>
+                <div class="counter">
+                    <p>Repeticiones: <span id="counter4">0</span></p>
+                    <div class="counter-buttons">
+                        <button onclick="incrementCounter('counter4')">+</button>
+                        <button onclick="decrementCounter('counter4')">-</button>
+                        <button onclick="resetCounter('counter4')">~</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    
+        <div class="hector">
+            <h2 id="Hombros">
+                <a href="#temporizador">Hombros</a>
+            </h2>
+        </div>
+    
+        <main>
+            <section class="exercise" id="Press militar con ligas">
+                <h2>Press militar con ligas</h2>  
+                <video controls muted>
+                    <source src="videos/press militar.mp4" type="video/mp4">
+                </video>
+                <div class="counter">
+                    <p>Repeticiones: <span id="counter5">0</span></p>
+                    <div class="counter-buttons">
+                        <button onclick="incrementCounter('counter5')">+</button>
+                        <button onclick="decrementCounter('counter5')">-</button>
+                        <button onclick="resetCounter('counter5')">~</button>
+                    </div>
+                </div>
+            </section>
+    
+            <section class="exercise" id="Elevaciones laterales con ligas">
+                <h2>Elevaciones laterales con ligas</h2>  
+                <video controls muted>
+                    <source src="videos/elevaciones laterales con liga.mp4" type="video/mp4">
+                </video>
+                <div class="counter">
+                    <p>Repeticiones: <span id="counter6">0</span></p>
+                    <div class="counter-buttons">
+                        <button onclick="incrementCounter('counter6')">+</button>
+                        <button onclick="decrementCounter('counter6')">-</button>
+                        <button onclick="resetCounter('counter6')">~</button>
+                    </div>
+                </div>
+            </section>
+    
+            <section class="exercise" id="Fondos de triceps">
+                <h2>Fondos de triceps</h2>  
+                <video controls muted>
+                    <source src="videos/fondos.mp4" type="video/mp4">
+                </video>
+                <div class="counter">
+                    <p>Repeticiones: <span id="counter7">0</span></p>
+                    <div class="counter-buttons">
+                        <button onclick="incrementCounter('counter7')">+</button>
+                        <button onclick="decrementCounter('counter7')">-</button>
+                        <button onclick="resetCounter('counter7')">~</button>
+                    </div>
+                </div>
+            </section>
+    
+            <section class="exercise" id="Curl de biceps con ligas">
+                <h2>Curl de biceps con ligas</h2>  
+                <video controls muted>
+                    <source src="videos/curl de biceps.mp4" type="video/mp4">
+                </video>
+                <div class="counter">
+                    <p>Repeticiones: <span id="counter8">0</span></p>
+                    <div class="counter-buttons">
+                        <button onclick="incrementCounter('counter8')">+</button>
+                        <button onclick="decrementCounter('counter8')">-</button>
+                        <button onclick="resetCounter('counter8')">~</button>
+                    </div>
+                </div>
+            </section>
+    
+        </main>
+    
+        <div class="hector">
+            <h2 id="Dia Pierna">
+                <a href="#temporizador">Dia Pierna</a>
+            </h2>
+        </div>
+    
+        <main>
+            <section class="exercise" id="Sentadillas con ligas-Piernas">
+                <h2>Sentadillas con ligas(piernas)</h2>  
+                <video controls muted>
+                    <source src="Lagartijascon pies elevados.mp4" type="video/mp4">
+                </video>
+                <div class="counter">
+                    <p>Repeticiones: <span id="counter9">0</span></p>
+                    <div class="counter-buttons">
+                        <button onclick="incrementCounter('counter9')">+</button>
+                        <button onclick="decrementCounter('counter9')">-</button>
+                        <button onclick="resetCounter('counter9')">~</button>
+                    </div>
+                </div>
+            </section>
+    
+            <section class="exercise" id="Estocadas con peso corporal">
+                <h2>Estocadas con peso corporal</h2>  
+                <video controls muted>
+                    <source src="videos/estocada.mp4" type="video/mp4">
+                </video>
+                <div class="counter">
+                    <p>Repeticiones: <span id="counter10">0</span></p>
+                    <div class="counter-buttons">
+                        <button onclick="incrementCounter('counter10')">+</button>
+                        <button onclick="decrementCounter('counter10')">-</button>
+                        <button onclick="resetCounter('counter10')">~</button>
+                    </div>
+                </div>
+            </section>
+    
+            <section class="exercise" id="Puente de gluteo con ligas">
+                <h2>Puente de gluteo con ligas</h2>  
+                <video controls muted>
+                    <source src="videos/puente gluteo.mp4" type="video/mp4">
+                </video>
+                <div class="counter">
+                    <p>Repeticiones: <span id="counter11">0</span></p>
+                    <div class="counter-buttons">
+                        <button onclick="incrementCounter('counter11')">+</button>
+                        <button onclick="decrementCounter('counter11')">-</button>
+                        <button onclick="resetCounter('counter11')">~</button>
+                    </div>
+                </div>
+            </section>
+    
+            <section class="exercise" id="Crunches">
+                <h2>Crunches</h2>  
+                <video controls muted>
+                    <source src="Lagartijascon pies elevados.mp4" type="video/mp4">
+                </video>
+                <div class="counter">
+                    <p>Repeticiones: <span id="counter12">0</span></p>
+                    <div class="counter-buttons">
+                        <button onclick="incrementCounter('counter12')">+</button>
+                        <button onclick="decrementCounter('counter12')">-</button>
+                        <button onclick="resetCounter('counter12')">~</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    
+        <div class="hector">
+            <h2 id="Piernas">
+                <a href="#temporizador">Piernas</a>
+            </h2>
+        </div>
+    
+        <main>
+            <section class="exercise" id="Sentadillas con ligas">
+                <h2>Sentadillas con ligas</h2>  
+                <video controls muted>
+                    <source src="Lagartijascon pies elevados.mp4" type="video/mp4">
+                </video>
+                <div class="counter">
+                    <p>Repeticiones: <span id="counter13">0</span></p>
+                    <div class="counter-buttons">
+                        <button onclick="incrementCounter('counter13')">+</button>
+                        <button onclick="decrementCounter('counter13')">-</button>
+                        <button onclick="resetCounter('counter13')">~</button>
+                    </div>
+                </div>
+            </section>
+    
+            <section class="exercise" id="Puente de gluteos">
+                <h2>Puente de gluteos</h2>  
+                <video controls muted>
+                    <source src="videos/puente gluteo.mp4" type="video/mp4">
+                </video>
+                <div class="counter">
+                    <p>Repeticiones: <span id="counter14">0</span></p>
+                    <div class="counter-buttons">
+                        <button onclick="incrementCounter('counter14')">+</button>
+                        <button onclick="decrementCounter('counter14')">-</button>
+                        <button onclick="resetCounter('counter14')">~</button>
+                    </div>
+                </div>
+            </section>
+    
+            <section class="exercise" id="Estocadas búlgaras">
+                <h2>Estocadas búlgaras</h2>  
+                <video controls muted>
+                    <source src="videos/estocada.mp4" type="video/mp4">
+                </video>
+                <div class="counter">
+                    <p>Repeticiones: <span id="counter15">0</span></p>
+                    <div class="counter-buttons">
+                        <button onclick="incrementCounter('counter15')">+</button>
+                        <button onclick="decrementCounter('counter15')">-</button>
+                        <button onclick="resetCounter('counter15')">~</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    
+        <div class="hector">
+            <h2 id="Full-Body">
+                <a href="#temporizador">Full Body</a>
+            </h2>
+        </div>
+    
+        <main>
+            <section class="exercise" id="Flexiones con ligas-fullbody">
+                <h2>Flexiones con ligas(Full-Body)</h2>  
+                <video controls muted>
+                    <source src="Lagartijascon pies elevados.mp4" type="video/mp4">
+                </video>
+                <div class="counter">
+                    <p>Repeticiones: <span id="counter16">0</span></p>
+                    <div class="counter-buttons">
+                        <button onclick="incrementCounter('counter16')">+</button>
+                        <button onclick="decrementCounter('counter16')">-</button>
+                        <button onclick="resetCounter('counter16')">~</button>
+                    </div>
+                </div>
+            </section>
+    
+            <section class="exercise" id="Remo con ligas-fullbody">
+                <h2>Remo con ligas(Full-Body)</h2>  
+                <video controls muted>
+                    <source src="Lagartijascon pies elevados.mp4" type="video/mp4">
+                </video>
+                <div class="counter">
+                    <p>Repeticiones: <span id="counter17">0</span></p>
+                    <div class="counter-buttons">
+                        <button onclick="incrementCounter('counter17')">+</button>
+                        <button onclick="decrementCounter('counter17')">-</button>
+                        <button onclick="resetCounter('counter17')">~</button>
+                    </div>
+                </div>
+            </section>
+    
+            <section class="exercise" id="Curl de biceps con ligas-fullbody">
+                <h2>Curl de biceps con ligas(Full-Body)</h2>  
+                <video controls muted>
+                    <source src="videos/curl de biceps.mp4" type="video/mp4">
+                </video>
+                <div class="counter">
+                    <p>Repeticiones: <span id="counter18">0</span></p>
+                    <div class="counter-buttons">
+                        <button onclick="incrementCounter('counter18')">+</button>
+                        <button onclick="decrementCounter('counter18')">-</button>
+                        <button onclick="resetCounter('counter18')">~</button>
+                    </div>
+                </div>
+            </section>
+    
+            <section class="exercise" id="Sentadilla con peso corporal">
+                <h2>Sentadilla con peso corporal</h2>  
+                <video controls muted>
+                    <source src="videos/sentadilla frontal.mp4" type="video/mp4">
+                </video>
+                <div class="counter">
+                    <p>Repeticiones: <span id="counter19">0</span></p>
+                    <div class="counter-buttons">
+                        <button onclick="incrementCounter('counter19')">+</button>
+                        <button onclick="decrementCounter('counter19')">-</button>
+                        <button onclick="resetCounter('counter19')">~</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+    </div>
+    
+    <script src="scripts.js"></script> <!-- Vinculación del JavaScript -->
+    
+</body>
+</html>
